@@ -12,7 +12,7 @@ import spock.lang.Specification
 class CouponServiceSpec extends Specification {
 
     void "get the correct Coupon based on a given CouponRule"() {
-        def cr = new CouponRule().save(flush: true)
+        def cr = new CouponRule().save()
         def coupon = new Coupon(rule: cr).save(flush: true, failOnError: true)
 
         expect:
